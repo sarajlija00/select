@@ -1,4 +1,5 @@
 const errorDiv = document.getElementById('error');
+const token =  `6205c51f2f31438ab76389b3644da184`
 
 const getTeams = () => new Promise ((resolve, reject) => {
     let url = `http://api.football-data.org/v2/competitions/PD/teams`;
@@ -12,5 +13,6 @@ const getTeams = () => new Promise ((resolve, reject) => {
         reject(errorDiv);
     }
     xhttp.open ('GET', url, true);
+    xhttp.setRequestHeader('X-Auth-Token',token);
     xhttp.send();
 });

@@ -8,16 +8,16 @@
 
 </head>
 
-<body>
+<body onload="populateLeagues()">
     <div>
         <div>
             <span>League:</span><br>
-            <select name="League"></select>
+            <select id="leagues" name="League" onchange="getLeague()"></select>
         </div>
 
         <div>
             <span>Teams:</span><br>
-            <select name="teams"></select><br>
+            <select id="teams"></select><br>
             <button onclick="getTeams()">Show</button>
         </div>
         <div id="error"></div>

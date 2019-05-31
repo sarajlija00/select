@@ -8,17 +8,16 @@
 
 </head>
 
-<body>
+<body onload="worldLeagueInTheInput()">
     <div>
         <div>
             <span>League:</span><br>
-            <select name="League"></select>
+            <select id="league" name="League"></select>
         </div>
 
         <div>
             <span>Teams:</span><br>
-            <select name="teams"></select><br>
-            <button onclick="getTeams()">Show</button>
+            <select name="Teams"></select><br>
         </div>
         <div id="error"></div>
     </div>
